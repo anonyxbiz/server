@@ -21,7 +21,9 @@ for m in genai.list_models():
 
 model = genai.GenerativeModel('gemini-pro')
 
-response = model.generate_content("What is the meaning of life?")
+def chat(text):
+  r = model.generate_content(text)
+  return r.text
 
-p(response)
-p(response.text)
+if __name__ == "__main__":
+  p(chat(input('You: '))
