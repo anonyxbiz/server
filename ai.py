@@ -22,7 +22,6 @@ for m in genai.list_models():
 
 model = genai.GenerativeModel('gemini-pro')
 
-%%time
 response = model.generate_content("What is the meaning of life?")
 
 to_markdown(response.text)
