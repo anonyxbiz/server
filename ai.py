@@ -3,8 +3,12 @@ from subprocess import run
 
 p = print
 
-r = get('https://github.com/anonyxbiz/server.git')
+def scrape():
+    r = get('https://github.com/anonyxbiz/server.git')
 
-p(r.status_code)
+    p(r.status_code)
 
-run('git pull origin main')
+if __name__ == "__main_":
+    from os import system as o
+    o('clear')
+    scrape()
