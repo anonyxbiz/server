@@ -1,14 +1,13 @@
 from requests import get, post
 from subprocess import run
+from os import system as o
 
 p = print
 
 def scrape():
     r = get('https://github.com/anonyxbiz/server.git')
 
-    p(r.status_code)
+    p(r.status_code, r.text)
 
-if __name__ == "__main_":
-    from os import system as o
-    o('clear')
-    scrape()
+o('clear')
+scrape()
