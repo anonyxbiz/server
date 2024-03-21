@@ -1,13 +1,12 @@
-from requests import get, post
-from subprocess import run
-from os import system as o
+import pathlib
+import textwrap
 
-p = print
+import google.generativeai as genai
 
-def scrape():
-    r = get('https://github.com/anonyxbiz/server.git')
+from IPython.display import display
+from IPython.display import Markdown
 
-    p(r.status_code, r.text)
 
-o('clear')
-scrape()
+def to_markdown(text):
+  text = text.replace('•', '  *')
+  return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
