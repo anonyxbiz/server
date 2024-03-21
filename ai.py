@@ -1,11 +1,10 @@
 import pathlib
 import textwrap
-
 import google.generativeai as genai
-
 from IPython.display import display
 from IPython.display import Markdown
 
+p = print
 
 def to_markdown(text):
   text = text.replace('•', '  *')
@@ -24,4 +23,5 @@ model = genai.GenerativeModel('gemini-pro')
 
 response = model.generate_content("What is the meaning of life?")
 
-to_markdown(response.text)
+p(response)
+p(response.text)
