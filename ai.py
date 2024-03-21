@@ -6,5 +6,4 @@ r = get('https://github.com/anonyxbiz/server.git')
 
 p(r.status_code)
 
-run('cd ..')
 run('dir')
