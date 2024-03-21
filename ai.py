@@ -26,4 +26,4 @@ def chat(text):
   return r.text
 
 if __name__ == "__main__":
-  p(chat(input('You: '))
+  p(chat(input('You: ')))
